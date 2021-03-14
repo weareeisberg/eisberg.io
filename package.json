@@ -1,0 +1,25 @@
+{
+  "name": "eisberg.io",
+  "version": "1.0.0",
+  "description": "This is our tiny website.",
+  "browser": "public/index.html",
+  "source": "src/index.html",
+  "license": "MIT",
+  "devDependencies": {
+    "autoprefixer": "^10.2.5",
+    "parcel": "^2.0.0-nightly.623",
+    "postcss-modules": "^4.0.0",
+    "serve": "^11.3.2"
+  },
+  "scripts": {
+    "dev": "parcel serve ./src/index.html",
+    "build": "parcel build ./src/index.html",
+    "serve": "serve public"
+  },
+  "browserslist": "> 0.2%",
+  "targets": {
+    "browser": {
+      "sourceMap": false
+    }
+  }
+}

@@ -1,0 +1,82 @@
+body {
+  color: white;
+  background: linear-gradient(243.17deg, #24272d 15.49%, #1a1c21 82.27%);
+
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+
+  display: grid;
+  place-content: center;
+}
+
+main {
+  max-width: 82vw;
+}
+
+@media (min-width: 576px) {
+  main {
+    max-width: 78vw;
+  }
+}
+
+@media (min-width: 768px) {
+  main {
+    max-width: 72vw;
+  }
+}
+
+@media (min-width: 992px) {
+  main {
+    max-width: 60vw;
+  }
+}
+
+@media (min-width: 1200px) {
+}
+
+h1 {
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 58px;
+  line-height: 88px;
+  font-style: normal;
+  font-weight: normal;
+
+  margin-block-start: 3rem;
+  margin-block-end: 3rem;
+}
+
+p {
+  font-family: Raleway;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 130%;
+  /* or 29px */
+
+  letter-spacing: 0.05em;
+}
+
+ul {
+  list-style-type: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+
+  margin-top: 3rem;
+  grid-gap: 1.5rem;
+}
+
+a,
+a:active,
+a:visited {
+  color: inherit;
+  text-decoration: none;
+}
+
+li:hover {
+  cursor: pointer;
+  color: lightseagreen;
+  transition: all 0.15s;
+}
