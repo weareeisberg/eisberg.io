@@ -21,7 +21,8 @@
   "browserslist": "> 0.2%",
   "targets": {
     "browser": {
-      "sourceMap": false
+      "sourceMap": false,
+      "publicUrl": "https://eisberg.io/"
     }
   }
 }
