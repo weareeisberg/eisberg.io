@@ -4,7 +4,7 @@ body {
 
   margin: 0;
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
 
   display: grid;
   place-content: center;
@@ -48,6 +48,32 @@ h1 {
   margin-block-end: 3rem;
 }
 
+h2 {
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 1.5em;
+  line-height: 1.65em;
+  font-style: normal;
+  font-weight: normal;
+
+  /* margin-block-start: 0.83rem; */
+  /* margin-block-end: 3rem; */
+}
+
+h3 {
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 1.17em;
+  line-height: 1.23em;
+  font-style: normal;
+  font-weight: normal;
+
+  /* margin-block-start: 0.83rem; */
+  /* margin-block-end: 3rem; */
+}
+
 p {
   font-family: Raleway;
   font-style: normal;
@@ -81,4 +107,26 @@ li:hover {
   cursor: pointer;
   color: lightseagreen;
   transition: all 0.15s;
+}
+
+footer {
+  position: absolute;
+  bottom: 1rem;
+  width: 100vw;
+  text-align: center;
+}
+
+footer > a,
+a:active,
+a:visited {
+  color: #494949;
+
+  font-size: 0.65rem;
+  font-family: Raleway;
+  font-style: normal;
+  letter-spacing: 0.05em;
+}
+
+footer > a:hover {
+  color: white;
 }

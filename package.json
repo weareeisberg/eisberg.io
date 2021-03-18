@@ -2,27 +2,21 @@
   "name": "eisberg.io",
   "version": "1.0.0",
   "description": "This is our tiny website.",
-  "browser": "public/index.html",
-  "source": "src/index.html",
   "license": "MIT",
   "devDependencies": {
     "@parcel/transformer-image": "2.0.0-nightly.2250",
     "autoprefixer": "^10.2.5",
     "parcel": "^2.0.0-nightly.623",
     "postcss-modules": "^4.0.0",
+    "posthtml-include": "^1.6.2",
+    "posthtml-markdownit": "^1.2.3",
     "serve": "^11.3.2",
     "sharp": "^0.27.2"
   },
   "scripts": {
-    "dev": "parcel serve ./src/index.html",
-    "build": "parcel build ./src/index.html",
+    "dev": "parcel serve ./src/*.html",
+    "build": "parcel build ./src/*.html --dist-dir public --public-url https://eisberg.io/ --no-source-maps --no-cache",
     "serve": "serve public"
   },
-  "browserslist": "> 0.2%",
-  "targets": {
-    "browser": {
-      "sourceMap": false,
-      "publicUrl": "https://eisberg.io/"
-    }
-  }
+  "browserslist": "> 0.2%"
 }
