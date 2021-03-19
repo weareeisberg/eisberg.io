@@ -3,7 +3,7 @@ body {
   background: linear-gradient(243.17deg, #24272d 15.49%, #1a1c21 82.27%);
 
   margin: 0;
-  width: 100vw;
+  max-width: 100vw;
   min-height: 100vh;
 
   display: grid;

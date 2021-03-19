@@ -8,24 +8,22 @@ Eisberg IT UG (haftungsbeschränkt)
 Benedekring 6
 04159 Leipzig
 
-## Kontakt
+### Kontakt
 
 hi@eisberg.io
 
-## Vertretungsberechtigte
+### Vertretungsberechtigte
 
-Vertretungsberechtigt: Magnus Krause
+Magnus Krause
 
-## Angaben zum Unternehmen
+### Angaben zum Unternehmen
 
 Umsatzsteuer Identifikationsnummer (USt-ID): DE326617787
 
-## Register und Registernummer
+### Register und Registernummer
 
 Handelsregister: HRB 36543
 
-## Haftungs- und Urheberrechtshinweise
-
-### Links auf fremde Webseiten:
+### Haftungs- und Urheberrechtshinweise
 
 Inhalte fremder Webseiten, auf die wir direkt oder indirekt verweisen, liegen außerhalb unseres Verantwortungsbereiches und machen wir uns nicht zu Eigen. Für alle Inhalte und insbesondere für Schäden, die aus der Nutzung der in den verlinkten Webseiten aufrufbaren Informationen entstehen, haftet allein der Anbieter der verlinkten Webseiten.
