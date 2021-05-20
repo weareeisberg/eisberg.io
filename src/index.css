@@ -8,6 +8,14 @@ body {
 
   display: grid;
   place-content: center;
+
+  font-family: Raleway;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 130%;
+  /* or 29px */
+
+  letter-spacing: 0.05em;
 }
 
 main {
@@ -99,16 +107,6 @@ a:visited {
   text-decoration: none;
 }
 
-li {
-  margin-right: 1.5rem;
-}
-
-li:hover {
-  cursor: pointer;
-  color: lightseagreen;
-  transition: all 0.15s;
-}
-
 footer {
   position: absolute;
   bottom: 1rem;
@@ -117,8 +115,7 @@ footer {
 }
 
 footer > a,
-a:active,
-a:visited {
+a:active {
   color: #494949;
 
   font-size: 0.65rem;
