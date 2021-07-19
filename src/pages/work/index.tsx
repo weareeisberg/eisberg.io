@@ -2,7 +2,6 @@ import fs from "fs";
 import matter from "gray-matter";
 import path from "path";
 import { styled } from "../../../stitches.config";
-import LogoSvg from "../../public/eisberg.svg";
 
 import PageLayout from "../../layouts/PageLayout";
 import { postFilePaths, POSTS_PATH } from "../../utils/mdxUtils";

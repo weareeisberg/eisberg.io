@@ -1,6 +1,5 @@
 .cache
 .parcel-cache
 .next
-public
 dist
 node_modules/
