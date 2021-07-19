@@ -31,7 +31,7 @@ const Index = () => {
         <p>
           We like to build great things. Preferably on the Internet. Especially
           in the area of eCommerce. Take a look at our work to understand how we
-          can help you
+          can help you.
         </p>
         <Link href="/work">
           <Button css={{ fontSize: "1rem" }}>Our work &rarr;</Button>
