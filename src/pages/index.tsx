@@ -2,9 +2,7 @@ import { styled } from "../../stitches.config";
 import Image from "next/image";
 import Link from "next/link";
 
-import LogoSvg from "../public/eisberg.svg";
-
-import PageLayout from "../layouts/PageLayout";
+import LogoSvg from "../../public/eisberg.svg";
 import Button from "../components/Button";
 
 const Body = styled("div", {

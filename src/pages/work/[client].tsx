@@ -2,15 +2,15 @@ import fs from "fs";
 import matter from "gray-matter";
 import { MDXRemote } from "next-mdx-remote";
 import { serialize } from "next-mdx-remote/serialize";
-import dynamic from "next/dynamic";
 import Head from "next/head";
-import Link from "next/link";
+import Image from "next/image";
 import { styled } from "../../../stitches.config";
 import path from "path";
 import CustomLink from "../../components/CustomLink";
 import PageLayout from "../../layouts/PageLayout";
 import { postFilePaths, POSTS_PATH } from "../../utils/mdxUtils";
 import { shikiRemarkPlugin } from "../../utils/mdxUtils";
+import imageSize from "rehype-img-size";
 
 // Custom components/renderers to pass to MDX.
 // Since the MDX files aren't loaded by webpack, they have no knowledge of how
@@ -18,6 +18,7 @@ import { shikiRemarkPlugin } from "../../utils/mdxUtils";
 // here.
 const components = {
   a: CustomLink,
+  img: (props) => <Image {...props} layout="responsive" loading="lazy" />,
   // It also works with dynamically-imported components, which is especially
   // useful for conditionally loading components for certain routes.
   // See the notes in README.md for more details.
@@ -62,7 +63,7 @@ export const getStaticProps = async ({ params }) => {
   const mdxSource = await serialize(content, {
     mdxOptions: {
       remarkPlugins: [[shikiRemarkPlugin, { highlighter }]],
-      rehypePlugins: [],
+      rehypePlugins: [[imageSize, { dir: "public" }]],
     },
     scope: data,
   });
