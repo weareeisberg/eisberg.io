@@ -12,6 +12,8 @@ import { postFilePaths, POSTS_PATH } from "../../utils/mdxUtils";
 import { shikiRemarkPlugin } from "../../utils/mdxUtils";
 import imageSize from "rehype-img-size";
 import ClientHeader from "../../components/ClientHeader";
+import { NextSeo } from "next-seo";
+import { useRouter } from "next/router";
 
 // Custom components/renderers to pass to MDX.
 // Since the MDX files aren't loaded by webpack, they have no knowledge of how
@@ -37,12 +39,20 @@ const Container = styled("main", {
 });
 
 const PostPage = ({ source, frontMatter }) => {
+  const { asPath } = useRouter();
   return (
-    <Container>
-      <main>
-        <MDXRemote {...source} components={components} />
-      </main>
-    </Container>
+    <>
+      <NextSeo
+        title={frontMatter.title}
+        description={frontMatter.description}
+        canonical={`https://eisberg.io${asPath}`}
+      />
+      <Container>
+        <main>
+          <MDXRemote {...source} components={components} />
+        </main>
+      </Container>
+    </>
   );
 };
 

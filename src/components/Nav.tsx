@@ -62,12 +62,11 @@ const Li = styled("li", {
 
 const Nav = () => {
   const { asPath } = useRouter();
-  console.log(asPath);
   return (
     <Container>
       <Link href="/" passHref>
         <a>
-          <Image src={LogoSvg} width="50" height="50" />
+          <Image src={LogoSvg} width="50" height="50" alt="Eisberg Logo" />
         </a>
       </Link>
       <Ul>

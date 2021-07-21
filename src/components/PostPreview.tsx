@@ -43,7 +43,7 @@ const PostPreview: React.FunctionComponent<{
             }}
           >
             <H2>{post.data.title}</H2>
-            <Box as="time" dateTime={post.data.published} css={{color: '$slate10'}}>
+            <Box as="time" dateTime={post.data.published} css={{color: '$slate11'}}>
               {post.data.published}
             </Box>
           </Box>

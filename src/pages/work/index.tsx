@@ -2,6 +2,7 @@ import fs from "fs";
 import matter from "gray-matter";
 import path from "path";
 import { styled } from "../../../stitches.config";
+import { NextSeo } from "next-seo";
 
 import PageLayout from "../../layouts/PageLayout";
 import { postFilePaths, POSTS_PATH } from "../../utils/mdxUtils";
@@ -22,14 +23,21 @@ const Container = styled("main", {
 
 const Work = ({ clients }) => {
   return (
-    <Container>
-      <h1>Our clients and their stories</h1>
-      <Box as="ul" css={{ margin: 0, padding: 0, listStyle: "none" }}>
-        {clients.sort(sortByPublished).map((post) => (
-          <PostPreview post={post} key={post.data.title} />
-        ))}
-      </Box>
-    </Container>
+    <>
+      <NextSeo
+        title="Our Work"
+        description="Find Eisbergs client stories and how we improved their business."
+        canonical="https://eisberg.io/work"
+      />
+      <Container>
+        <h1>Our clients and their stories</h1>
+        <Box as="ul" css={{ margin: 0, padding: 0, listStyle: "none" }}>
+          {clients.sort(sortByPublished).map((post) => (
+            <PostPreview post={post} key={post.data.title} />
+          ))}
+        </Box>
+      </Container>
+    </>
   );
 };
 
