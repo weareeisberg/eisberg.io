@@ -59,7 +59,7 @@ export const globalStyles = global({
     },
   },
   "p, a, li": {
-    lineHeight: "1.4rem",
+    lineHeight: "1.6rem",
   },
 
   "h1, h2, h3": {
@@ -72,7 +72,7 @@ export const globalStyles = global({
     fontSize: "2.2rem",
     lineHeight: "3rem",
     fontStyle: "normal",
-    fontWeight: "normal",
+    fontWeight: "bold",
 
     // marginBlockStart: "3rem",
     // marginBlockEnd: "3rem",
@@ -82,7 +82,7 @@ export const globalStyles = global({
     fontSize: "1.5em",
     lineHeight: "1.65em",
     fontStyle: "normal",
-    fontWeight: "normal",
+    fontWeight: "bold",
 
     /* margin-block-start: 0.83rem; */
     /* marg,in-block-end: 3rem; */
@@ -92,7 +92,7 @@ export const globalStyles = global({
     fontSize: "1.17em",
     lineHeight: "1.23em",
     fontStyle: "normal",
-    fontWeight: "normal",
+    fontWeight: "bold",
 
     /* margin-block-start: 0.83rem; */
     /* margin-block-end: 3rem; */

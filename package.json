@@ -6,6 +6,7 @@
   "dependencies": {
     "@mapbox/rehype-prism": "^0.7.0",
     "@mdx-js/loader": "^1.6.22",
+    "@modulz/radix-icons": "^4.0.0",
     "@next/mdx": "^11.0.1",
     "@radix-ui/colors": "^0.1.7",
     "@stitches/react": "^0.2.2",

@@ -11,6 +11,7 @@ import PageLayout from "../../layouts/PageLayout";
 import { postFilePaths, POSTS_PATH } from "../../utils/mdxUtils";
 import { shikiRemarkPlugin } from "../../utils/mdxUtils";
 import imageSize from "rehype-img-size";
+import ClientHeader from "../../components/ClientHeader";
 
 // Custom components/renderers to pass to MDX.
 // Since the MDX files aren't loaded by webpack, they have no knowledge of how
@@ -23,6 +24,7 @@ const components = {
   // useful for conditionally loading components for certain routes.
   // See the notes in README.md for more details.
   // TestComponent: dynamic(() => import("../../components/TestComponent")),
+  ClientHeader,
   Head,
 };
 
@@ -37,7 +39,6 @@ const Container = styled("main", {
 const PostPage = ({ source, frontMatter }) => {
   return (
     <Container>
-      <h1>{frontMatter.title}</h1>
       <main>
         <MDXRemote {...source} components={components} />
       </main>
