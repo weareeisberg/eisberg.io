@@ -1,3 +1,8 @@
-const withTM = require('next-transpile-modules')(['unist-util-visit']);
+const withTM = require("next-transpile-modules")(["unist-util-visit"]);
 
-module.exports = withTM(/* your Next.js config */);
+module.exports = withTM({
+  i18n: {
+    locales: ["en", "de"],
+    defaultLocale: "de",
+  },
+});
