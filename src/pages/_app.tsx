@@ -1,4 +1,3 @@
-import { NextPage } from "next";
 import type { AppProps } from "next/app";
 import React from "react";
 import { globalStyles } from "../../stitches.config";

@@ -1,7 +1,7 @@
 import { styled } from "../../stitches.config";
 import Image from "next/image";
 
-import LogoSvg from "../public/eisberg.svg";
+import LogoSvg from "../../public/eisberg.svg";
 import PageLayout from "../layouts/PageLayout";
 
 const Container = styled("main", {
