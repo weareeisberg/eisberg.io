@@ -53,10 +53,6 @@ export const globalStyles = global({
     "&:hover": {
       color: "$blue9",
     },
-
-    "&:active, &:focus": {
-      color: "$blue10",
-    },
   },
   "p, a, li": {
     lineHeight: "1.6rem",

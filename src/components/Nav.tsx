@@ -17,6 +17,13 @@ const Container = styled("nav", {
     paddingTop: "8rem 0",
     gridColumn: "3/11",
   },
+
+  // Reset a styles
+  a: {
+    textDecoration: "none",
+    border: "none",
+    boxShadow: "none",
+  },
 });
 
 const Ul = styled("ul", {
@@ -41,7 +48,7 @@ const Li = styled("li", {
     isActive: {
       true: {
         a: {
-          boxShadow: "0px 2px $grass6",
+          boxShadow: "0px 2px $blue6",
         },
       },
       false: {
@@ -55,10 +62,13 @@ const Li = styled("li", {
 
 const Nav = () => {
   const { asPath } = useRouter();
+  console.log(asPath);
   return (
     <Container>
-      <Link href="/">
-        <Image src={LogoSvg} width="50" height="50" />
+      <Link href="/" passHref>
+        <a>
+          <Image src={LogoSvg} width="50" height="50" />
+        </a>
       </Link>
       <Ul>
         <Li isActive={asPath === "/"}>
