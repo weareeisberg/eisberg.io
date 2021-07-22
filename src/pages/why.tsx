@@ -26,7 +26,7 @@ const Why = () => {
   return (
     <>
       <Container>
-        <Image src={LogoSvg} width="80" height="80" />
+        <Image src={LogoSvg} width="80" height="80" alt="Eisberg Logo" />
         <h1>Come and work with us</h1>
         <div>
           Eisberg is a place for passionate developers. A lot of dev agencies
@@ -45,14 +45,14 @@ const Why = () => {
           <li>
             <div>🚀</div>
             <div>
-              We believe in modern tech. That's why we use the latest and most
+              We believe in modern tech. That`&apos;s why we use the latest and most
               awesome tech available - for all of our projects.
             </div>
           </li>
           <li>
             <div>💻</div>
             <div>
-              We love OpenSource. That's why we incorporate OSS work deeply in
+              We love OpenSource. That`&apos;s why we incorporate OSS work deeply in
               our day to day basis.
             </div>
           </li>
@@ -62,7 +62,7 @@ const Why = () => {
           <a
             href="mailto:hi@eisberg.io"
             target="_blank"
-            rel="noopener"
+            rel="noopener noreferrer"
             aria-label="Send eMail"
           >
             {" "}

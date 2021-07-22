@@ -25,10 +25,10 @@ const Index = ({ content }: InferGetStaticPropsType<typeof getStaticProps>) => {
   return (
     <Body>
       <Container>
-        <Image src={LogoSvg} width="80" height="80" />
+        <Image src={LogoSvg} width="80" height="80" alt="Eisberg Logo" />
         <h1>{content.headline}</h1>
         <p>{content.subheadline}</p>
-        <Link href="/work">
+        <Link href="/work" passHref>
           <Button css={{ fontSize: "1rem" }}>
             {content.buttonText} &rarr;
           </Button>
