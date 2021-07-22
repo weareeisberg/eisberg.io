@@ -4,7 +4,6 @@
   "description": "This is our tiny website.",
   "license": "MIT",
   "dependencies": {
-    "@mapbox/rehype-prism": "^0.7.0",
     "@mdx-js/loader": "^1.6.22",
     "@modulz/radix-icons": "^4.0.0",
     "@next/mdx": "^11.0.1",

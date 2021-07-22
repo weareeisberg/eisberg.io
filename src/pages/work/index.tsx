@@ -21,16 +21,16 @@ const Container = styled("main", {
   },
 });
 
-const Work = ({ clients }) => {
+const Work = ({ clients, content }) => {
   return (
     <>
       <NextSeo
-        title="Our Work"
-        description="Find Eisbergs client stories and how we improved their business."
+        title={content.seo.title}
+        description={content.seo.description}
         canonical="https://eisberg.io/work"
       />
       <Container>
-        <h1>Our clients and their stories</h1>
+        <h1>{content.headline}</h1>
         <Box as="ul" css={{ margin: 0, padding: 0, listStyle: "none" }}>
           {clients.sort(sortByPublished).map((post) => (
             <PostPreview post={post} key={post.data.title} />
@@ -45,8 +45,26 @@ Work.Layout = PageLayout;
 
 export default Work;
 
-export function getStaticProps() {
-  const clients = postFilePaths.map((filePath) => {
+export const getStaticProps = ({ locale }) => {
+  const TEXT = {
+    de: {
+      headline: "Unser Kunden und ihre Geschichten",
+      seo: {
+        title: "Unsere Arbeit",
+        description: "Eisbergs Kunden und ihre Geschichten",
+      },
+    },
+    en: {
+      headline: "Our clients and their stories",
+      seo: {
+        title: "Our work",
+        description:
+          "Find Eisbergs client stories and how we improved their business.",
+      },
+    },
+  };
+
+  const _clients = postFilePaths.map((filePath) => {
     const source = fs.readFileSync(path.join(POSTS_PATH, filePath));
     const { content, data } = matter(source);
 
@@ -57,5 +75,10 @@ export function getStaticProps() {
     };
   });
 
-  return { props: { clients } };
-}
+  const clientsInLanguage = _clients.filter(
+    (client) => client.data.lang === locale
+  );
+  const clients = clientsInLanguage.length ? clientsInLanguage : [];
+
+  return { props: { clients, content: TEXT[locale] } };
+};

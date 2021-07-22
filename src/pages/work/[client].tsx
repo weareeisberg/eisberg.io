@@ -21,7 +21,14 @@ import { useRouter } from "next/router";
 // here.
 const components = {
   a: CustomLink,
-  img: (props) => <Image {...props} layout="responsive" loading="lazy" />,
+  img: (props) => (
+    <Image
+      {...props}
+      layout="responsive"
+      loading="lazy"
+      alt="Custom Eisberg Image"
+    />
+  ),
   // It also works with dynamically-imported components, which is especially
   // useful for conditionally loading components for certain routes.
   // See the notes in README.md for more details.
@@ -60,8 +67,8 @@ PostPage.Layout = PageLayout;
 
 export default PostPage;
 
-export const getStaticProps = async ({ params }) => {
-  const postFilePath = path.join(POSTS_PATH, `${params.client}.mdx`);
+export const getStaticProps = async ({ params, locale }) => {
+  const postFilePath = path.join(POSTS_PATH, `${params.client}.${locale}.mdx`);
   const source = fs.readFileSync(postFilePath);
 
   const { content, data } = matter(source);
@@ -89,10 +96,11 @@ export const getStaticProps = async ({ params }) => {
 
 export const getStaticPaths = async () => {
   const paths = postFilePaths
-    // Remove file extensions for page paths
-    .map((path) => path.replace(/\.mdx?$/, ""))
-    // Map the path into the static paths object required by Next.js
-    .map((client) => ({ params: { client } }));
+    .map((path) => {
+      const [client, locale] = path.split(".");
+      return { client, locale };
+    })
+    .map(({ client, locale }) => ({ params: { client }, locale }));
 
   return {
     paths,
