@@ -7,7 +7,7 @@ import Image from "next/image";
 import { styled } from "../../../stitches.config";
 import path from "path";
 import CustomLink from "../../components/CustomLink";
-import PageLayout from "../../layouts/PageLayout";
+import PostLayout from "../../layouts/PostLayout";
 import { postFilePaths, POSTS_PATH } from "../../utils/mdxUtils";
 import { shikiRemarkPlugin } from "../../utils/mdxUtils";
 import imageSize from "rehype-img-size";
@@ -46,13 +46,36 @@ const Container = styled("main", {
 });
 
 const PostPage = ({ source, frontMatter }) => {
-  const { asPath } = useRouter();
+  const { asPath, basePath, pathname } = useRouter();
+  console.log(basePath);
+  console.log(pathname);
+  console.log(asPath);
   return (
     <>
       <NextSeo
         title={frontMatter.title}
         description={frontMatter.description}
         canonical={`https://eisberg.io${asPath}`}
+        openGraph={{
+          type: "website",
+          url: `https://eisberg.io${asPath}`,
+          title: frontMatter.title,
+          description: frontMatter.description,
+          images: [
+            {
+              url: `https://eisberg.io${asPath}.png`,
+              width: 1012,
+              height: 506,
+              alt: "Og Image Alt",
+            },
+          ],
+          site_name: "eisberg.io",
+        }}
+        twitter={{
+          handle: "@eisberg_io",
+          site: "@eisberg_io",
+          cardType: "summary_large_image",
+        }}
       />
       <Container>
         <main>
@@ -63,7 +86,7 @@ const PostPage = ({ source, frontMatter }) => {
   );
 };
 
-PostPage.Layout = PageLayout;
+PostPage.Layout = PostLayout;
 
 export default PostPage;
 

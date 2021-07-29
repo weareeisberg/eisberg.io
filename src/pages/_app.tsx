@@ -1,8 +1,6 @@
 import type { AppProps } from "next/app";
 import React from "react";
 import { globalStyles } from "../../stitches.config";
-import SEO from "../utils/next-seo.config";
-import { DefaultSeo } from "next-seo";
 
 const MyApp = ({
   Component,
@@ -16,7 +14,6 @@ const MyApp = ({
 
   return (
     <Layout>
-      <DefaultSeo {...SEO} />
       <Component {...pageProps} />
     </Layout>
   );
