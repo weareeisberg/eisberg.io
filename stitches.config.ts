@@ -69,9 +69,6 @@ export const globalStyles = global({
     lineHeight: "3rem",
     fontStyle: "normal",
     fontWeight: "bold",
-
-    // marginBlockStart: "3rem",
-    // marginBlockEnd: "3rem",
   },
 
   h2: {
@@ -79,9 +76,6 @@ export const globalStyles = global({
     lineHeight: "1.65em",
     fontStyle: "normal",
     fontWeight: "bold",
-
-    /* margin-block-start: 0.83rem; */
-    /* marg,in-block-end: 3rem; */
   },
 
   h3: {
@@ -89,9 +83,6 @@ export const globalStyles = global({
     lineHeight: "1.23em",
     fontStyle: "normal",
     fontWeight: "bold",
-
-    /* margin-block-start: 0.83rem; */
-    /* margin-block-end: 3rem; */
   },
 
   // Code blocks
@@ -99,6 +90,13 @@ export const globalStyles = global({
     padding: "0.75rem",
     borderRadius: "0.3rem",
     overflowY: "auto",
+  },
+
+  blockquote: {
+    fontStyle: "italic",
+    borderLeft: ".2rem solid $blue6",
+    margin: 0,
+    paddingLeft: "1rem",
   },
 
   // Line numbers
