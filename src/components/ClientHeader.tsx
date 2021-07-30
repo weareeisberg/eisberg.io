@@ -1,25 +1,18 @@
 import { styled } from "../../stitches.config";
 import { ExternalLinkIcon, LapTimerIcon, CubeIcon } from "@modulz/radix-icons";
+import Box from "./Box";
 
-const Table = styled("table", {
-  width: "100%",
+const Container = styled("div", {
+  display: "flex",
+  flexDirection: "column",
+  fontSize: "0.85rem",
+
+  "@small": {
+    flexDirection: "row",
+  },
 
   "*": {
     textAlign: "center",
-  },
-
-  "thead > td": {
-    borderBottom: "1px solid $blue4",
-  },
-
-  td: {
-    borderRight: "1px solid $blue4",
-    padding: "0.25rem",
-    fontSize: "0.85rem",
-  },
-
-  "td:last-of-type": {
-    borderRight: "none",
   },
 });
 
@@ -33,28 +26,46 @@ const ClientHeader: React.FunctionComponent<{
   link = "https://eisberg.io",
 }) => {
   return (
-    <Table>
-      <thead>
-        <td>
-          <LapTimerIcon />
-        </td>
-        <td>
-          <CubeIcon />
-        </td>
-        <td>
-          <ExternalLinkIcon />
-        </td>
-      </thead>
-      <tbody>
-        <td>{duration}</td>
-        <td>{stack}</td>
-        <td>
+    <Container>
+      <Box css={{ flex: 1, "@small": { borderRight: "1px solid $blue4" } }}>
+        <LapTimerIcon />
+        <Box
+          css={{
+            borderTop: "1px solid $blue4",
+            paddingTop: ".25rem",
+            marginTop: ".25rem",
+          }}
+        >
+          {duration}
+        </Box>
+      </Box>
+      <Box css={{ flex: 1, "@small": { borderRight: "1px solid $blue4" } }}>
+        <CubeIcon />
+        <Box
+          css={{
+            borderTop: "1px solid $blue4",
+            paddingTop: ".25rem",
+            marginTop: ".25rem",
+          }}
+        >
+          {stack}
+        </Box>
+      </Box>
+      <Box css={{ flex: 1 }}>
+        <ExternalLinkIcon />
+        <Box
+          css={{
+            borderTop: "1px solid $blue4",
+            paddingTop: ".25rem",
+            marginTop: ".25rem",
+          }}
+        >
           <a href={link} target="_blank" rel="noopener noreferrer">
             {link}
           </a>
-        </td>
-      </tbody>
-    </Table>
+        </Box>
+      </Box>
+    </Container>
   );
 };
 
