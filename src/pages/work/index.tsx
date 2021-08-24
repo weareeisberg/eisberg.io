@@ -48,7 +48,7 @@ export default Work;
 export const getStaticProps = ({ locale }) => {
   const TEXT = {
     de: {
-      headline: "Unser Kunden und ihre Geschichten",
+      headline: "Unsere Kunden und ihre Geschichten",
       seo: {
         title: "Unsere Arbeit",
         description: "Eisbergs Kunden und ihre Geschichten",
