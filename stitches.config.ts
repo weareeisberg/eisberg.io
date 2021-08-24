@@ -95,7 +95,7 @@ export const globalStyles = global({
   blockquote: {
     fontStyle: "italic",
     borderLeft: ".2rem solid $blue6",
-    margin: 0,
+    margin: '2rem 0',
     paddingLeft: "1rem",
   },
 
